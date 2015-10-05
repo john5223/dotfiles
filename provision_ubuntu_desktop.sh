@@ -8,6 +8,8 @@ sudo apt-get install -y htop curl tree ack-grep
 sudo apt-get install -y python-pip
 sudo apt-get install -y postgresql-client
 
+sudo apt-get install -y build-essential ruby1.9.1 ruby1.9.1-dev
+
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
 sudo chsh -s `which zsh`
 
@@ -21,6 +23,8 @@ git config --global user.email "curran736@gmail.com"
 git config --global user.name "John Curran"
 git config --global push.default simple
 
+#Virtualbox + Vagrant
+
 wget http://download.virtualbox.org/virtualbox/5.0.6/virtualbox-5.0_5.0.6-103037\~Ubuntu\~trusty_amd64.deb -P ~/Downloads
 sudo dpkg -i ~/Downloads/virtualbox-5.0_5.0.6-103037~Ubuntu~trusty_amd64.deb
 
@@ -28,7 +32,11 @@ vagrant_file="vagrant_1.7.4_x86_64.deb"
 wget https://dl.bintray.com/mitchellh/vagrant/$vagrant_file -P ~/Downloads
 sudo dpkg -i ~/Downloads/$vagrant_file
 
+#ChefDK + Vagrant plugins
+wget https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chefdk_0.8.1-1_amd64.deb -P ~/Downloads
+sudo dpkg -i ~/Downloads/chefdk_0.8.1-1_amd64.deb
 
+sudo vagrant plugin install vagrant-omnibus vagrant-chef-zero vagrant-berkshelf
 
 
 #Desktop
@@ -48,6 +56,8 @@ sudo apt-get update
 
 # - Applications
 sudo apt-get install -y gnome-shell ubuntu-gnome-desktop
+sudo apt-get install -y network-manager-vpnc openvpn
+
 sudo apt-get install -y cairo-dock
 sudo apt-get install -y terminator
 
