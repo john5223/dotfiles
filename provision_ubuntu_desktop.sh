@@ -21,6 +21,15 @@ git config --global user.email "curran736@gmail.com"
 git config --global user.name "John Curran"
 git config --global push.default simple
 
+wget http://download.virtualbox.org/virtualbox/5.0.6/virtualbox-5.0_5.0.6-103037\~Ubuntu\~trusty_amd64.deb -P ~/Downloads
+sudo dpkg -i ~/Downloads/virtualbox-5.0_5.0.6-103037~Ubuntu~trusty_amd64.deb
+
+vagrant_file="vagrant_1.7.4_x86_64.deb"
+wget https://dl.bintray.com/mitchellh/vagrant/$vagrant_file -P ~/Downloads
+sudo dpkg -i ~/Downloads/$vagrant_file
+
+
+
 
 #Desktop
 
@@ -28,6 +37,9 @@ git config --global push.default simple
 sudo add-apt-repository -y ppa:webupd8team/java
 sudo add-apt-repository -y ppa:webupd8team/sublime-text-3
 sudo apt-add-repository -y ppa:rael-gc/scudcloud
+
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list'
 
 sudo sh -c "echo 'deb http://ppa.launchpad.net/happy-neko/ps3mediaserver/ubuntu raring main' > /etc/apt/sources.list.d/happy-neko-ubuntu-ps3mediaserver-vivid.list"
 sudo sh -c "echo 'deb http://archive.canonical.com/ubuntu/ trusty partner' > /etc/apt/sources.list.d/canonical_partner.list"
