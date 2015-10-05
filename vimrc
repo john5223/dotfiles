@@ -1,122 +1,12 @@
-" change the leader to be a comma vs slash
-let mapleader=","
-
-" syntax highlighting
-syntax on
-
-" display line numbers
-set number
-
-" using only 1 column (and 1 space) while possible
-set numberwidth=1
-
-" we are using dark background in vim
-set background=dark
-
-" ignore these files when completing
-set wildignore+=.git,*.pyc
-
-" show a line at column 79
-if exists("&colorcolumn")
-    set colorcolumn=79
-endif
-
-" have a line indicate the cursor location
-set cursorline
-
-" show the cursor position all the time
-set ruler
-
-" use spaces, not tabs, for autoindent/tab key.
-set expandtab
-
-" don't wrap text
-set nowrap
-
-" don't wrap text in the middle of a word
-set linebreak
-
-" always set auto-indenting on
-set autoindent
-
-" use smart indent if there is no indent file
-set smartindent
-
-" <tab> inserts 4 spaces
-set tabstop=4
-
-" but an indent level is 4 spaces wide.
-set shiftwidth=4
-
-" <BS> over an autoindent deletes both spaces.
-set softtabstop=4
-
-" rounds indent to a multiple of shiftwidth
-set shiftround
-
-" show matching <> (html mainly) as well
-set matchpairs+=<:>
-
-" disable folding
-set nofoldenable
-
-" don't bell or blink
-set noerrorbells
-set vb t_vb=
-
-" keep our cursor in the middle of the screen
-set scrolloff=100
-set sidescrolloff=30
-
-" show whitespace
-set list
-set listchars=tab:>-,trail:~
-
-" default to using case insensitive searches ...
-set ignorecase
-
-" ... unless uppercase letters are used in the regex.
-set smartcase
-
-" handle tabs more intelligently while searching
-set smarttab
-
-" highlight searches by default.
-set hlsearch
-
-" incrementally search while typing a /regex
-set incsearch
-
-set autoread
-set backspace=indent,eol,start
-set history=200
-set noswapfile
-
-set cino=(0
-set showmatch
-set hidden
-set nowrap
-set noshowmode
-set laststatus=2
-
-" remove trailing whitespace on <leader>S
-noremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
-
-" load Vundle for plugin management
+" Vundle
+" ------
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
+
+" Plugins declaration
 call vundle#begin()
-
-" let Vundle manage itself
 Plugin 'gmarik/Vundle.vim'
-
-" plugins
-" after adding a new plugin, run "vim +PluginInstall +qall" to install it
-Plugin 'mileszs/ack.vim'
-Plugin 'godlygeek/tabular' " must appear before plasticboy/vim-markdown
-Plugin 'plasticboy/vim-markdown'
-
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'JarrodCTaylor/vim-256-color-schemes'
 
@@ -138,10 +28,7 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'mustache/vim-mustache-handlebars'
-
-" end loading plugins
 call vundle#end()
-filetype plugin indent on
 
 " Options
 filetype plugin on
@@ -157,6 +44,28 @@ let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 set background=dark
 highlight clear SignColumn
+
+set autoindent
+set autoread
+set backspace=indent,eol,start
+set history=200
+set noswapfile
+
+let mapleader=","
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set cino=(0
+set number
+set cursorline
+set showmatch
+set incsearch
+set hlsearch
+set hidden
+set nowrap
+set noshowmode
+set laststatus=2
 
 " Filetypes management
 " --------------------
@@ -190,28 +99,9 @@ let g:syntastic_mode_map={ 'mode': 'active',
                          \ 'active_filetypes': [],
                          \ 'passive_filetypes': ['html', 'handlebars'] }
 
-
-" set color theme
-silent! colorscheme solarized
-
-" set shortcut key and open NerdTree at start
-map <leader>n :NERDTreeToggle<CR>
-let NERDTreeIgnore = ['\.pyc$', '\.egg-info$', '\.db$']
-
-" cut, copy & paste
-nmap <C-V> "+gP
-imap <C-V> <ESC>"+gpi
-vmap <C-V> c<ESC>"+gph
-vmap <C-C> "+y
-
-" enable spell checking
-set spell spelllang=en_us
-
-" disable double spacing between sentences
-set nojoinspaces
-
-" integrate yanking & pasting with the OS X clipboard
-set clipboard=unnamed
+let NERDTreeIgnore=['\.pyc$']           " Ignores python pyc files
+let g:NERDTreeShowHidden=1
+map <C-e> :NERDTreeToggle<CR>
 
 
 let g:jedi#use_tabs_not_buffers=0

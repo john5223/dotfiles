@@ -2,7 +2,7 @@
 dir=~/dotfiles
 #dotfiles="ackrc profile inputrc screenrc vim vimrc gvimrc gitignore_global tmux.conf"
 #rawfiles="bin"
-dotfiles="zshrc"
+dotfiles="zshrc vim vimrc gvimrc gitignore_global"
 rawfiles=""
 
 # symlink dotfiles to the the home dir, each prefixed by a dot (.)
@@ -24,3 +24,6 @@ git submodule init
 git submodule update
 vim +PluginInstall! +qall
 
+#Compile YouCompleteMe for vim
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --clang-completer
