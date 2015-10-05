@@ -35,6 +35,10 @@ sudo sh -c "echo 'deb http://archive.canonical.com/ubuntu/ trusty partner' > /et
 sudo apt-get update
 
 # - Applications
+sudo apt-get install -y gnome-shell ubuntu-gnome-desktop
+sudo apt-get install -y cairo-dock
+sudo apt-get install -y terminator
+
 sudo apt-get install -y xchat scudcloud hunspell-en-us
 
 sudo apt-get install -y skype sni-qt:i386
@@ -42,7 +46,6 @@ sudo apt-get install -y pgadmin3
 sudo apt-get install -y google-chrome-stable
 sudo apt-get install -y filezilla
 
-sudo apt-get install -y gnome-shell ubuntu-gnome-desktop
 sudo apt-get install -y sublime-text-installer
 sudo apt-get install -y oracle-java8-installer
 
