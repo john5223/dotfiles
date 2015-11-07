@@ -1,3 +1,6 @@
+BufWritePre * :%s/\s\+$//e
+
+
 " Vundle
 " ------
 set nocompatible
