@@ -117,3 +117,9 @@ let g:ctrlp_buffer_func = { 'enter': 'MyCtrlPMappings' }
 func! MyCtrlPMappings()
     nnoremap <buffer> <silent> <F6> :call <sid>DeleteBuffer()<cr>
 endfunc
+
+nmap <leader>T :enew<CR>                " To open a new empty buffer
+nmap <Tab> :bnext<CR>                   " Move to the next buffer
+nmap <S-Tab> :bprevious<CR>            " Move to the previous buffer
+nmap <C-x> :bp <BAR> bd #<CR>           " Close the current buffer and move to the previous one
+
