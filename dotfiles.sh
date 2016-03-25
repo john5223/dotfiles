@@ -2,7 +2,7 @@
 dir=~/dotfiles
 #dotfiles="ackrc profile inputrc screenrc vim vimrc gvimrc gitignore_global tmux.conf"
 #rawfiles="bin"
-dotfiles="zshrc vim vimrc gvimrc gitignore_global"
+dotfiles="profile zshrc vim vimrc gvimrc gitignore_global"
 rawfiles=""
 
 # symlink dotfiles to the the home dir, each prefixed by a dot (.)

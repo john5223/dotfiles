@@ -1,5 +1,3 @@
-BufWritePre * :%s/\s\+$//e
-
 
 " Vundle
 " ------
@@ -30,7 +28,7 @@ Plugin 'davidhalter/jedi-vim'
 
 Plugin 'pangloss/vim-javascript'
 Plugin 'hail2u/vim-css3-syntax'
-Plugin 'mustache/vim-mustache-handlebars'
+" Plugin 'mustache/vim-mustache-handlebars'
 call vundle#end()
 
 " Options
