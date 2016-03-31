@@ -35,3 +35,11 @@ export SSH_KEY_PATH="~/.ssh/id_rsa"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+export BROWSER=/usr/bin/google-chrome-stable
+
+
+eval `ssh-agent -s`
+ssh-add ~/.ssh/*id_rsa
+
+source /etc/profile.d/autojump.zsh

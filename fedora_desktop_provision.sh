@@ -25,4 +25,6 @@ sudo dnf install -y wine
 sudo dnf config-manager --add-repo=http://negativo17.org/repos/fedora-steam.repo
 sudo dnf -y install steam
 
+sudo dnf -y --best install samba cifs-utils
+
 sh dotfiles.sh
