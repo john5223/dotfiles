@@ -19,8 +19,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'airblade/vim-gitgutter'
 
 Plugin 'ervandew/supertab'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 Plugin 'klen/python-mode'

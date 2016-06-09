@@ -6,7 +6,7 @@ sudo apt-get update -qq
 sudo apt-upgrade -yqq
 
 sudo apt-get install -yq software-properties-common cmake
-sudo apt-get install -yq git vim zsh git-core
+sudo apt-get install -yq git vim vim-nox zsh git-core
 sudo apt-get install -yq htop curl tree ack-grep
 
 sudo apt-get install -yq python-pip python-dev
