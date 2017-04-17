@@ -21,12 +21,15 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'ervandew/supertab'
 Plugin 'honza/vim-snippets'
 
-Plugin 'klen/python-mode'
+ Plugin 'klen/python-mode'
 Plugin 'davidhalter/jedi-vim'
 
 Plugin 'pangloss/vim-javascript'
 Plugin 'hail2u/vim-css3-syntax'
-" Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'mustache/vim-mustache-handlebars'
+
+Plugin 'Valloric/YouCompleteMe'
+
 call vundle#end()
 
 " Options

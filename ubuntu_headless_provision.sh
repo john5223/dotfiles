@@ -1,5 +1,5 @@
 #Common
-sh common_provision.sh
+sh ubuntu_common_provision.sh
 
 #dotfiles
 sh dotfiles.sh
