@@ -87,5 +87,4 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 
 export BROWSER=/usr/bin/google-chrome-stable
 
-source ~/.autojump.zsh
-
+source /usr/share/autojump/autojump.zsh
